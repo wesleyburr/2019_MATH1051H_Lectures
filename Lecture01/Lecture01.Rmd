@@ -1,0 +1,114 @@
+---
+title: 'MATH 1051H-A: Lecture #01'
+output:
+   ioslides_presentation:
+     font-family: Lato Semibold
+     font-import: http://fonts.googleapis.com/css?family=Lato
+     widescreen: yes
+     css: ../style.css
+     fig_caption: yes
+---
+<style>
+citation {
+  font-size: 4px;
+}
+</style>
+
+<!-- Intro to course, get them started with rstudio.cloud -->
+
+# Welcome Information
+
+## Contact Details
+
+* **Me**: Dr. Wesley Burr
+* **Email**: wesleyburr@trentu.ca (only for important, personal issues!)
+* **Office**: GCS 335
+* **Office Hours**: Fridays, 1000-1150
+* **Workshop Assignments**: **very important** that you know your section!
+
+## Digital Tech & Links
+
+I believe in the power of technology to make teaching and learning easier. So we're going
+to use quite a bit of it in this class. 
+
+* **Blackboard**: official grades, class-wide communications, paper assignment postings (1 assignment)
+* **WeBWorK**: most of your assignments (digital)
+* **Chat (Slack)**: asking questions, communicating, sharing
+* **rstudio.cloud**: learning to **do** statistics and data analysis (2 assignments)
+
+## WeBWorK
+
+* http://webwork.trentu.ca/
+* Demo was done in workshop on Thursday
+* First assignment will go live this evening
+* Multiple attempts (**varies** by question)
+* Assignments due throughout term
+
+## Chat Interface
+
+* persistant
+* multiple user
+* replaces email
+* where the TAs and professors will spend time outside of class & office hours
+
+* http://webwork.trentu.ca/chat/
+
+## RStudio
+
+The **R** programming language and interface is **the** language of statistics in the 21st century. 
+
+* MATH 1051H is not a traditional mathematics course
+* Statistics blends mathematics, computer science, data analysis, data science, and philosophy
+* You will be learning to do **data analysis** using **R** in this class
+
+* http://rstudio.cloud/ (login with your Trent-Google account)
+
+## Let's Do Something Fun
+
+Load up a web browser, and go to:
+
+<br>
+http://bit.ly/MATH1051_LecDemo_1
+
+<br>
+... I'm going to alt-tab now!
+
+## And - We're Back!
+
+Now I'd like to go over the course with you.
+
+* Lectures: 2 + 1
+* Workshops: 1 hour, Thursdays
+
+## Texts & Software
+
+* OpenIntro Statistics (free, or $16)
+* Book of R: excellent reference for shelf, not required (about $45)
+* Calculator: anything goes, Casio FX-991 recommended (bookstore)
+* R & RStudio: free!
+
+## Things Worth Marks
+
+* WeBWork2: 10%, lowest dropped
+* R Assignments: 2, 15% each (weeks 4 and 10, tentatively)
+* Theory Written: 10% (week 12)
+* Midterm: 15%
+* Final Exam: 35%
+
+## How to Get Help
+
+* Slack: regular office hours, schedule posted next week
+* MATH1051HELP@trentu.ca - **admin and course matters**
+* TAs in Workshop: weekly
+* Help Centre Hours (GCS): posted in week 3, dedicated MATH 1051H slots
+* TA In-Person Office Hours: TBD
+* My Office Hours: Fridays, 10-12, GCS 335
+
+
+## Some Final Thoughts
+
+Final note: our class runs Thursday-Wednesday. So each "week" is actually wrapping around a weekend. This messes things up a **lot**.
+
+* still trying to decide when (day, time) to make assignments due; will announce via Blackboard this weekend
+* first assignment will be posted tonight, due in 7+ days
+* only requires readings from textbook, and Wednesday's lecture will also cover the material
