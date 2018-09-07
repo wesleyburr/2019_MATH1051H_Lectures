@@ -1,0 +1,33 @@
+---
+title: "MATH 1051H: Lecture Links"
+author: 'Dr. Wesley S. Burr'
+date: 2018-09-07 
+output:
+  xaringan::moon_reader:
+    chakra: remark-latest.min.js
+    lib_dir: libs
+    nature:
+      highlightStyle: tomorrow-night-bright
+      highlightLines: true
+      highlightLanguage: r
+    includes:
+      in_header: header.html
+    countIncrementalSlides: false
+    css: example.css
+---
+
+class: inverse
+
+```{r include=FALSE}
+library(ggplot2)
+filter <- dplyr::filter
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.width=10.5, fig.height=4, 
+  comment=NA, rows.print=16)
+theme_set(theme_gray(base_size = 24))
+```
+
+## Lecture 01 - September 7
+
+<a href="./Lecture01/Lecture01.html">Lecture 01 - Link to Slides</a>
+
+---
