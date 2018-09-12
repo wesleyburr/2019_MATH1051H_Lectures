@@ -26,8 +26,13 @@ knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.width=10.5, fig.height=4
 theme_set(theme_gray(base_size = 24))
 ```
 
-## Lecture 01 - September 7
+## Week 01
 
+**Lecture 01 - September 7**
 <a href="./Lecture01/Lecture01.html">Lecture 01 - Link to Slides</a>
+
+**Lecture 02 - September 12**
+<a href="./Lecture02/Lecture02.html">Lecture 02 - Link to Slides</a>
+
 
 ---
