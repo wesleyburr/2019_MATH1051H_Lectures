@@ -34,5 +34,13 @@ theme_set(theme_gray(base_size = 24))
 **Lecture 02 - September 12**
 <a href="./Lecture02/Lecture02.html">Lecture 02 - Link to Slides</a>
 
+---
+
+class: inverse
+
+## Week 02
+
+**Lecture 03 - September 14**
+<a href="./Lecture03/Lecture03.html">Lecture 03 - Link to Slides</a>
 
 ---

@@ -1,0 +1,48 @@
+---
+title: 'MATH 1051H-A: Lecture #03'
+output:
+   ioslides_presentation:
+     font-family: Lato Semibold
+     font-import: http://fonts.googleapis.com/css?family=Lato
+     widescreen: yes
+     css: ../style.css
+     fig_caption: yes
+---
+<style>
+citation {
+  font-size: 4px;
+}
+</style>
+
+<!-- Intro to course, get them started with rstudio.cloud -->
+
+# Some Course Notes
+
+## WeBWorK
+
+* we've re-launched "Assignment1-W" as "PracticeProblems1" so it's clear that you don't have to complete them
+* the grades auto-save, so once you're done attempts, it's automatically in the system - no submission necessary
+* reminder that Assignment 1 is due on Monday evening (17th)
+* Assignment 2 will be posted this evening
+
+## RStudio & rstudio.cloud
+
+* some growing pains (big class!)
+* RStudio is working with us directly to fix performance issues
+* keep trying, don't give up
+
+We will be posting some videos in the next few days so you can see how things should work, and follow along directly on your own computer.
+
+## RStudio On Your Computer
+
+If you're marginally tech-savvy, the easiest way to be able to do R stuff is to use RStudio on your **own computer**. If you're interested in doing this, start with Workshop 1 instructions, and check out our videos on Youtube that we linked.
+
+If you are still unable to get it working, and want help, use any of the 14 hours of office hours per week, and talk to someone: TAs or me!
+
+# Today's Lecture
+
+## Demo Time!
+
+You can either download the demo from Blackboard, <a href="Lecture03_Demo.Rmd">right here</a>, or copy my Project on rstudio.cloud. Or, if you just want the results, no interactivity, click <a href="Lecture03_Demo.pdf">here instead</a>.
+
+... alt-tabbing ...
