@@ -55,7 +55,7 @@ class: inverse
 **Lecture 05 - September 21**
 <a href="./Lecture05/Lecture05_Demo.pdf">PDF Rmd Render</a>
 
-<!--**Lecture 04 - September 19**
-<a href="./Lecture04/Lecture04.html">HTML Slides</a> (<a href="./Lecture04/Lecture04.pdf">PDF</a>)-->
+**Lecture 06 - September 25**
+<a href="./Lecture06/Lecture06.html">HTML Slides</a> (<a href="./Lecture06/Lecture06.pdf">PDF</a>)
 
 ---
