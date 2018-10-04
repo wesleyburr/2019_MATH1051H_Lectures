@@ -70,3 +70,15 @@ class: inverse
 **Lecture 08 - October 3**
 <a href="./Lecture08/Lecture08.html">HTML Slides</a> (<a href="./Lecture08/Lecture08.pdf">PDF</a>)
 
+---
+
+class: inverse
+
+## Week 04
+
+**Lecture 09 - October 5**
+ Slides - <a href="./Lecture09/Lecture09.pdf">PDF</a>, 
+<a href="./Lecture09/Lecture09.html">HTML </a>,
+<a href="./Lecture09/Lecture09_Demo.pdf">R Demo Render</a>
+
+
