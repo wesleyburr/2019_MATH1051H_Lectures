@@ -1,0 +1,37 @@
+---
+title: 'Lecture 11 - Normal and Normal Approximation'
+author: 'Wesley Burr'
+date: "05/12/2018"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Snippet of Code from last Friday
+
+```{r}
+x <- seq(from = -3.5, to = 3.5, by = 0.01)
+plot(x = x, y = dnorm(x), type = "l", 
+     xlab = "z", ylab = "Normal Density")
+pnorm(q = 20, mean = 15, sd = 4, lower.tail = FALSE)
+```
+
+# Examples for current Friday
+
+## Example 1
+
+Suppose we toss a fair coin 20 times. What is the probability of getting between 9 and 11 heads?
+
+## Example 2
+
+In a particular program at Trent, 60% of students are men and 40% are women. In a random sample of 50 students what is the probability that more than half are women?
+
+## Example 3
+
+"Skip the Dishes" finds that 70% of people order through them and ask for Chinese food, and 30% for Italian food. Last week 426 orders were made through the local, Peterborough, unit. Find the probability that at least 200 orders were for Italian food.
+
+
