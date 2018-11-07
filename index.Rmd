@@ -118,7 +118,10 @@ class: inverse
 
 ## Week 08
 
-**Lecture 13 - November 2**: 
+**Lecture 15 - November 2**: (finished slides from <a href="./Lecture14/Lecture14.html">Lecture 14</a>)
 
-**Lecture 14 - November 7**:
+**Lecture 16 - November 7**:
+Slides - <a href="./Lecture16/Lecture16.pdf">PDF</a>, 
+<a href="./Lecture16/Lecture16.html">HTML</a>
+
 
