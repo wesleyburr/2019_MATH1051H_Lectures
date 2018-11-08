@@ -124,4 +124,15 @@ class: inverse
 Slides - <a href="./Lecture16/Lecture16.pdf">PDF</a>, 
 <a href="./Lecture16/Lecture16.html">HTML</a>
 
+---
+
+class: inverse
+
+## Week 09
+
+**Lecture 17 - November 9**: <a href="./Lecture17/Lecture17.html">HTML</a>
+
+**Lecture 18 - November 14**:
+
+
 
