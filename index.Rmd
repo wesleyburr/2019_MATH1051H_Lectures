@@ -1,5 +1,5 @@
 ---
-title: "MATH 1051H: Lecture Links"
+title: "MATH 1051H-A: Lecture Links"
 author: 'Dr. Wesley S. Burr'
 date: 2019-09-04
 output:
@@ -25,6 +25,23 @@ knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.width=10.5, fig.height=4
   comment=NA, rows.print=16)
 theme_set(theme_gray(base_size = 24))
 ```
+
+## Lecture Slide Links
+
+The following slides have links to the lecture slides for **Section A** of MATH 1051H for
+the 2019FA semester at Trent University. 
+
+<br />
+
+* the HTML slides are the canonical format
+* the PDFs aren't bad
+* the Powerpoints are kinda hideous, only use them if you really love Powerpoint
+for some reason
+
+---
+
+class: inverse
+
 
 ## Week 01
 
