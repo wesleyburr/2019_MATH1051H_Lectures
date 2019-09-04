@@ -1,2 +1,2 @@
-# 2018_MATH1051H_Lectures
-Lectures for the 2018FA version of MATH1051H at Trent University
+# 2019_MATH1051H_Lectures
+Lectures for the 2019FA version of MATH1051H at Trent University
