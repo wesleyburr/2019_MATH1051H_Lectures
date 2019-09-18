@@ -1,7 +1,7 @@
 ---
 title: "MATH 1051H-A: Lecture Links"
 author: 'Dr. Wesley S. Burr'
-date: 2019-09-13
+date: 2019-09-17
 output:
   xaringan::moon_reader:
     chakra: remark-latest.min.js
@@ -54,6 +54,7 @@ class: inverse
 **Lecture 02 - September 11**   
 <a href="./Lecture02/Lecture02.html">HTML</a>; 
 <a href="./Lecture02/Lecture02.pdf">PDF</a>;
+<a href="./Lecture02/Lecture02.pptx">PPTX</a>
 
 
 ---
@@ -65,7 +66,12 @@ class: inverse
 **Lecture 03 - September 13**
 <a href="./Lecture03/Lecture03.html">HTML</a>; 
 <a href="./Lecture03/Lecture03.pdf">PDF</a>;
-<a href="./Lecture03/Lecture03.pptx">PPTX</a> (hideous)
+<a href="./Lecture03/Lecture03.pptx">PPTX</a>
 
+<br />
 **Lecture 04 - September 18**
+<a href="./Lecture04/Lecture04.html">HTML</a>; 
+<a href="./Lecture04/Lecture04.pdf">PDF</a>;
+<a href="./Lecture04/Lecture04.pptx">PPTX</a>; <br/>
+<a href="https://rstudio.cloud/spaces/26689/project/532300">(RStudio Example)</a>
 

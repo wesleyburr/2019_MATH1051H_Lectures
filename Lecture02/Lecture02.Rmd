@@ -7,7 +7,7 @@ output:
     font-family: Lato Semibold
     font-import: http://fonts.googleapis.com/css?family=Lato
     widescreen: yes
-  beamer_presentation: default
+always_allow_html: yes
 ---
 <style>
 citation {
