@@ -75,3 +75,15 @@ class: inverse
 <a href="./Lecture04/Lecture04.pptx">PPTX</a>; <br/>
 <a href="https://rstudio.cloud/spaces/26689/project/532300">(RStudio Example)</a>
 
+---
+
+class: inverse
+
+## Week 03
+
+**Lecture 05 - September 20**
+<a href="./Lecture05/Lecture05.html">HTML</a>; 
+<a href="./Lecture05/Lecture05.pdf">PDF</a>;
+<a href="./Lecture05/Lecture05.pptx">PPTX</a>
+
+<br />
