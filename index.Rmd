@@ -1,7 +1,7 @@
 ---
 title: "MATH 1051H-A: Lecture Links"
 author: 'Dr. Wesley S. Burr'
-date: 2019-09-24
+date: 2019-09-26
 output:
   xaringan::moon_reader:
     chakra: remark-latest.min.js
@@ -46,12 +46,14 @@ class: inverse
 ## Week 01
 
 **Lecture 01 - September 6**   
+
 <a href="./Lecture01/Lecture01.html">HTML</a>; 
 <a href="./Lecture01/Lecture01.pdf">PDF</a>;
 <a href="./Lecture01/Lecture01.pptx">PPTX</a> (hideous)
 
 <br />
 **Lecture 02 - September 11**   
+
 <a href="./Lecture02/Lecture02.html">HTML</a>; 
 <a href="./Lecture02/Lecture02.pdf">PDF</a>;
 <a href="./Lecture02/Lecture02.pptx">PPTX</a>
@@ -64,12 +66,14 @@ class: inverse
 ## Week 02
 
 **Lecture 03 - September 13**
+
 <a href="./Lecture03/Lecture03.html">HTML</a>; 
 <a href="./Lecture03/Lecture03.pdf">PDF</a>;
 <a href="./Lecture03/Lecture03.pptx">PPTX</a>
 
 <br />
 **Lecture 04 - September 18**
+
 <a href="./Lecture04/Lecture04.html">HTML</a>; 
 <a href="./Lecture04/Lecture04.pdf">PDF</a>;
 <a href="./Lecture04/Lecture04.pptx">PPTX</a>; <br/>
@@ -82,6 +86,7 @@ class: inverse
 ## Week 03
 
 **Lecture 05 - September 20**
+
 <a href="./Lecture05/Lecture05.html">HTML</a>; 
 <a href="./Lecture05/Lecture05.pdf">PDF</a>;
 <a href="./Lecture05/Lecture05.pptx">PPTX</a>
@@ -89,8 +94,27 @@ class: inverse
 <br />
 
 **Lecture 06 - September 25**
+
 <a href="./Lecture06/Lecture06.html">HTML</a>; 
 <a href="./Lecture06/Lecture06.pdf">PDF</a>;
 <a href="./Lecture06/Lecture06.pptx">PPTX</a>
+
+<br />
+
+---
+
+class: inverse
+
+## Week 04
+
+**Lecture 07 - September 27**
+
+<a href="./Lecture07/Lecture07.html">HTML</a>; 
+<a href="./Lecture07/Lecture07.pdf">PDF</a>;
+<a href="./Lecture07/Lecture07.pptx">PPTX</a>
+
+<br />
+
+**Lecture 08 - October 2**
 
 <br />
