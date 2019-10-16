@@ -1,7 +1,7 @@
 ---
 title: "MATH 1051H-A: Lecture Links"
 author: 'Dr. Wesley S. Burr'
-date: 2019-10-11
+date: 2019-10-15
 output:
   xaringan::moon_reader:
     chakra: remark-latest.min.js
@@ -164,3 +164,10 @@ class: inverse
 
 <br />
 
+**Lecture 12 - October 16**
+
+<a href="./Lecture12/Lecture12.html">HTML</a>; 
+<a href="./Lecture12/Lecture12.pdf">PDF</a>;
+<a href="./Lecture12/Lecture12.pptx">PPTX</a>
+
+<br />
