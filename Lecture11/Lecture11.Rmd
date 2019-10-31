@@ -1,0 +1,69 @@
+---
+title: 'Lecture 11'
+output:
+   ioslides_presentation:
+     font-family: Lato Semibold
+     font-import: http://fonts.googleapis.com/css?family=Lato
+     widescreen: yes
+     css: ../style.css
+     fig_caption: yes
+---
+<style>
+citation {
+  font-size: 4px;
+}
+</style>
+
+<!--  Version 1.0-0
+
+      This version of the slides is taken directly from Mine Çetinkaya-Rundel's lecture slides
+      posted on OpenIntro.org in PDF (LaTeX) format, and moved to Rmd. Topic is Chapter 2-1 and 2-2
+      of OpenIntro Statistics, Probability, introduction through Bayes'.
+      
+      A large part of the HTML/CSS formatting is janky, and could be cleaned up. Feel free to issue a 
+      pull request if you love HTML and CSS and want to fix this up.
+      
+      - wburr, Sept 28, 2018
+-->
+
+<!-- this is the knitr block to import a figure with some precision. Could just use HTML ...
+<center>
+```{r, out.width = "800px", echo = FALSE}
+knitr::include_graphics("fig/fig_1_7_boxplots.png")
+```
+</center>-->
+
+## Conditional Probability and Venn Diagrams
+
+I've shown you how to setup a tree diagram for branching probability problems, but we haven't reviewed
+the other type of diagram used: **Venn Diagrams**.
+
+This will be best shown via example.
+
+## Example
+
+Consider a survey asking people their opinion of fast food establishments. In the survey,
+56\% of people say they would eat at McDonald's, 72\% of people say they would eat at Wendy's,
+and of the people who say they eat at Wendy's, 65\% say they would also eat at McDonald's.
+
+**Question 1**: what is the probability a randomly selected person would eat at **both** Wendy's
+and McDonald's?
+
+## Example
+
+
+
+## Example
+
+**Question 2**: what is the conditional probability that if a randomly selected person would eat
+at McDonald's that they would also eat at Wendy's?
+
+
+## Example
+
+**Question 3**: given that we know that the person selected would eat at Wendy's, what is the probability
+they would **not** eat at McDonald's?
+
+## And now ...
+
+WeBWorK Practice 3 - let's solve some problems!
