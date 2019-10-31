@@ -4,7 +4,7 @@
     <title>MATH 1051H-A: Lecture Links</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Wesley S. Burr" />
-    <meta name="date" content="2019-10-15" />
+    <meta name="date" content="2019-10-31" />
     <script src="https://use.fontawesome.com/5235085b15.js"></script>
     <link rel="stylesheet" href="example.css" type="text/css" />
   </head>
@@ -14,7 +14,7 @@ class: center, middle, inverse, title-slide
 
 # MATH 1051H-A: Lecture Links
 ### Dr. Wesley S. Burr
-### 2019-10-15
+### 2019-10-31
 
 ---
 
@@ -165,7 +165,47 @@ class: inverse
 
 &lt;a href="./Lecture12/Lecture12.html"&gt;HTML&lt;/a&gt;; 
 &lt;a href="./Lecture12/Lecture12.pdf"&gt;PDF&lt;/a&gt;;
+(&lt;a href="./Lecture12/Lecture12-annotated.pdf"&gt;annotated&lt;/a&gt;);
 &lt;a href="./Lecture12/Lecture12.pptx"&gt;PPTX&lt;/a&gt;
+
+&lt;br /&gt;
+
+---
+
+class: inverse
+
+## Week 07
+
+**Lecture 13 - October 18**
+
+Midterm examination.
+
+&lt;br /&gt;
+
+**Lecture 14 - October 30**
+
+&lt;a href="./Lecture14/Lecture14.html"&gt;HTML&lt;/a&gt;; 
+&lt;a href="./Lecture14/Lecture14.pdf"&gt;PDF&lt;/a&gt;;
+(&lt;a href="./Lecture14/Lecture14-annotated.pdf"&gt;annotated&lt;/a&gt;);
+&lt;a href="./Lecture14/Lecture14.pptx"&gt;PPTX&lt;/a&gt;
+
+&lt;br /&gt;
+
+---
+
+class: inverse
+
+## Week 08
+
+**Lecture 15 - November 1**
+
+&lt;a href="./Lecture15/Lecture15.html"&gt;HTML&lt;/a&gt;; 
+&lt;a href="./Lecture15/Lecture15.pdf"&gt;PDF&lt;/a&gt;;
+&lt;a href="./Lecture15/Lecture15.pptx"&gt;PPTX&lt;/a&gt;
+
+&lt;br /&gt;
+
+**Lecture 16 - November 6**
 
 &lt;br /&gt;
     </textarea>
@@ -214,7 +254,24 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     deleted = true;
   });
-})();</script>
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
 
 <script>
 (function() {

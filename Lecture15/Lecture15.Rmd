@@ -1,0 +1,134 @@
+---
+title: 'Lecture 15'
+output:
+   ioslides_presentation:
+     font-family: Lato Semibold
+     font-import: http://fonts.googleapis.com/css?family=Lato
+     widescreen: yes
+     css: ../style.css
+     fig_caption: yes
+---
+<style>
+citation {
+  <!-- font-size: 4px; -->
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- This is not explicitly in the OpenIntro slides - inverse problems -->
+
+# Inverse Normal Problems
+
+## The Inverse Problem
+
+As we've seen in the previous, we often need to take $Z$-scores and find probabilities from them. Sometimes this is in a normal problem, sometimes an approximation, and so on.
+
+What if you **wanted to go backward**? What would this look like?
+
+## Inverse Problem Statement
+
+What if I told you "the probability of this event happening is 0.5".
+What would the $Z$-score of such a setup be?
+
+$$
+P(Z \leq z_0) = 0.5
+$$
+
+What's the unknown here? **$z_0$**!
+
+## How do we solve for $z_0$?
+
+* trial and error?
+* use tables?
+* **use R!**
+
+## Using R to Find $z_0$
+
+```{r}
+qnorm(p = 0.5, mean = 0, sd = 1, lower.tail = TRUE)
+```
+
+Does this make sense? This is saying that $z_0 = 0$ has probability to its left of 0.5.
+
+```{r}
+pnorm(q = 0, mean = 0, sd = 1, lower.tail = TRUE)
+```
+
+## Checking Again
+
+```{r, fig.height = 4}
+x <- seq(from = -3, to = 3, by = 0.01)
+plot(x, dnorm(x), type = "l", xlab = "Z")
+abline(h = 0)
+abline(v = 0, col = "red")
+```
+
+## Practice
+
+What value of $z_0$ has $P(-z_0 \leq Z \leq z_0) = 0.3$?
+
+## Practice
+
+What value of $z_0$ has $P(-z_0 \leq Z \leq z_0) = 0.3$?
+
+```{r, fig.height = 3, echo = FALSE}
+x <- seq(from = -3, to = 3, by = 0.01)
+plot(x, dnorm(x), type = "l", xlab = "Z", xaxt = 'n', 
+     ylab = "Probability")
+abline(h = 0)
+abline(v = c(-1, 1), col = "red")
+axis(side = 1, line = 0, at = c(-1, 1), label = c("-z0", "z0"))
+```
+
+So what do we actually need to run?
+
+## Practice
+
+```{r}
+qnorm(p = 0.15, mean = 0, sd = 1, lower.tail = TRUE)
+```
+
+This is **-z0**, because we used 0.15 area to the left, and
+**lower.tail = TRUE**.
+
+```{r}
+qnorm(p = 0.15, mean = 0, sd = 1, lower.tail = FALSE)
+```
+
+And this is **$z_0$**, because **lower.tail = FALSE**.
+
+## More Practice
+
+We're now going to solve a series of problems in all the variations of this that we can do.
+
+## Problem Type 1: Simple Left
+
+What value of $z_0$ has $P(-2 \leq Z \leq z_0) = 0.7$?
+
+## Problem Type 2: Simple Right
+
+What value of $z_0$ has $P(-z_0 \leq Z \leq 1.0) = 0.4$ ?
+
+## Problem Type 3: Symmetric, known
+
+What value of $z_0$ has $P(-z_0 \leq Z \leq z_0) = 0.4$ ?
+
+## Problem Type 4: Symmetric, Indirect information
+
+If the region from $-z_0$ to $z_0$ is 90\% of the area under
+a standard normal curve, find $z_0$. 
+
+## Problem Type 5: Not Symmetric, known
+
+What value of $z_0$ has $P(-2\cdot z_0 \leq Z \leq z_0) = 0.6$ ?
+
+## Problem Type 6: Not Symmetric, Indirect information
+
+If the 90th percentile of your distribution is equal to
+11, and the 5th percentile is equal to 4, find $\mu$
+and $\sigma$.
+
+## $\;$
