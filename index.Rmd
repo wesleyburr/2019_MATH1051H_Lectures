@@ -204,6 +204,7 @@ class: inverse
 
 <a href="./Lecture15/Lecture15.html">HTML</a>; 
 <a href="./Lecture15/Lecture15.pdf">PDF</a>;
+(<a href="./Lecture15/Lecture15-annotated.pdf">annotated</a>);
 <a href="./Lecture15/Lecture15.pptx">PPTX</a>
 
 <br />
