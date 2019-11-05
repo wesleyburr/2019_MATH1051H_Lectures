@@ -211,4 +211,23 @@ class: inverse
 
 **Lecture 16 - November 6**
 
+<a href="./Lecture16/Lecture16.html">HTML</a>; 
+<a href="./Lecture16/Lecture16.pdf">PDF</a>;
+<a href="./Lecture16/Lecture16.pptx">PPTX</a>
+
 <br />
+
+---
+
+class: inverse
+
+## Week 09
+
+**Lecture 17 - November 8**
+
+<a href="./Lecture17/Lecture17.html">HTML</a>; 
+<a href="./Lecture17/Lecture17.pdf">PDF</a>;
+<a href="./Lecture17/Lecture17.pptx">PPTX</a>
+
+<br />
+
