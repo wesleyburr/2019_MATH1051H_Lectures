@@ -1,0 +1,70 @@
+---
+title: "Lecture 19"
+output:
+  beamer_presentation: default
+  ioslides_presentation:
+    css: ../style.css
+    fig_caption: yes
+    font-family: Lato Semibold
+    font-import: http://fonts.googleapis.com/css?family=Lato
+    widescreen: yes
+---
+<style>
+citation {
+  font-size: 4px;
+}
+</style>
+
+# Review
+
+## Recap: Confidence Intervals
+
+**Confidence interval, a general formula**
+$$
+\text{point estimate} \pm z^\star \cdot SE
+$$
+
+Conditions when the point estimate = $\bar{x}$:
+
+* **Independence:** Observations in the sample must be independent
+    - random sample/assignment
+    -  if sampling without replacement, $n <$ 10% of population
+* **Sample size / skew:** $n \ge 30$ and population distribution should not be extremely skewed
+
+## The Inputs
+
+* Point Estimates: computed from data, typically sample statistics (e.g., $\bar{X}$)
+* $z^\star$: the critical $z$ value, found using qnorm() and the choice of significance
+* SE: the standard error, specific to each point estimate; if using $\bar{X}$ then 
+this is $\text{SE} = \frac{\sigma}{\sqrt{n}}$.
+
+## Recap: Hypothesis testing framework
+
+* Set the hypotheses.
+* Check assumptions and conditions.
+* Calculate a **test statistic** and a p-value.
+* Make a decision, and interpret it in context of the research question.
+
+## Recap: Hypothesis testing for a population mean
+
+* Set the hypotheses
+    - $H_0: \mu = \text{null value}$
+    - $H_A: \mu <$ or $>$ or $\ne$ null value
+* Calculate the point estimate
+* Check assumptions and conditions
+    - Independence: random sample/assignment, 10\% condition when sampling without replacement
+    - Normality: nearly normal population or $n \ge 30$, no extreme skew -- **or use the t distribution** (next chapter)
+
+## Recap: Hypothesis testing for a population mean
+
+* Calculate a **test statistic** and a p-value (draw a picture!)
+$$
+Z = \frac{\bar{x} - \mu}{SE},\text{ where }SE = \frac{s}{\sqrt{n}}
+$$
+* Make a decision, and interpret it in context
+    - If p-value $< \alpha$, reject $H_0$, data provide evidence for $H_A$
+    - If p-value $> \alpha$, do not reject $H_0$, data do not provide evidence for $H_A$
+
+## Let's Solve Some Problems
+
+We're going to now solve some problems from the WW Practice.
