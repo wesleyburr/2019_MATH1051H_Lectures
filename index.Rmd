@@ -251,8 +251,9 @@ class: inverse
 
 <a href="./Lecture19/Lecture19.html">HTML</a>; 
 <a href="./Lecture19/Lecture19.pdf">PDF</a>;
-<a href="./Lecture19/Lecture19.pptx">PPTX</a>
-(continued from Lecture 16)
+(<a href="./Lecture19/Lecture19-annotated.pdf">annotated</a>);
+<a href="./Lecture19/Lecture19.pptx">PPTX</a>;
+(<a href="./Lecture19/Lecture19-FindingN.pdf">Finding N</a>)
 
 <br />
 
