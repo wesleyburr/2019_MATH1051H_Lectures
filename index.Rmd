@@ -282,6 +282,8 @@ class: inverse
 
 <a href="./Lecture22/Lecture22.html">HTML</a>; 
 <a href="./Lecture22/Lecture22.pdf">PDF</a>;
+(<a href="./Lecture22/Lecture22-annotated.pdf">annotated</a>);
 <a href="./Lecture22/Lecture22.pptx">PPTX</a>;
+(<a href="./Lecture22/Lecture22-R-Code.pdf">R Code</a>)
 
 
