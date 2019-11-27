@@ -1,0 +1,382 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={Lecture 22},
+            pdfauthor={Wesley Burr},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{Lecture 22}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Wesley Burr}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{27/11/2019}
+
+
+\begin{document}
+\maketitle
+
+\hypertarget{warmup-example-cyber-security}{%
+\subsection{Warmup Example: Cyber
+Security}\label{warmup-example-cyber-security}}
+
+Based on information from the National Cyber Security Alliance, 93\% of
+computer owners believe they have antivirus programs installed on their
+computers.
+
+In a random sample of 400 scanned computers, it is found that 380 of
+them (or 95\%) actually have antivirus software programs.
+
+Use the sample data from the scanned computers to test the claim that
+93\% of computers have antivirus software.
+
+\hypertarget{requirements}{%
+\subsection{Requirements}\label{requirements}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The 400 computers were randomly selected (check!)
+\item
+  There is a fixed number of independent trials, two possible outcomes
+  (check!)
+\item
+  Is \(np \geq 10\)? Is \(n(1-p) \geq 10\)? \[
+  \begin{aligned*}
+   np &= (400)(0.93) = 372 \\
+  n(1-p) &= (400)(1-0.93) = 28
+  \end{aligned*}
+  \] Check!
+\end{enumerate}
+
+\hypertarget{hypotheses}{%
+\subsection{Hypotheses}\label{hypotheses}}
+
+Write the hypotheses:
+
+\[
+\mathbf{H_0}: p = 0.93 \qquad \text{versus} \qquad \mathbf{H_A}: p \neq 0.93
+\]
+
+\hypertarget{significance-level-test-statistic}{%
+\subsection{Significance Level, Test
+Statistic}\label{significance-level-test-statistic}}
+
+Since we didn't have a specified level, choose \(\alpha = 0.05\). We are
+testing a claim about a \textbf{population proportion}, so we will use a
+normal approximation:
+
+\[
+z_\text{test} = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} = \frac{ \frac{380}{400} - 0.93}{\sqrt{\frac{0.93(0.07)}{400}}}
+\]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{z_test <-}\StringTok{ }\NormalTok{( }\DecValTok{380}\OperatorTok{/}\DecValTok{400} \OperatorTok{-}\StringTok{ }\FloatTok{0.93}\NormalTok{ ) }\OperatorTok{/}\StringTok{ }\KeywordTok{sqrt}\NormalTok{( }\FloatTok{0.93} \OperatorTok{*}\StringTok{ }\FloatTok{0.07} \OperatorTok{/}\StringTok{ }\DecValTok{400}\NormalTok{ )}
+\NormalTok{z_test}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1.567724
+\end{verbatim}
+
+\hypertarget{the-p-value}{%
+\subsection{The p-value}\label{the-p-value}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{pnorm}\NormalTok{(z_test, }\DataTypeTok{lower.tail =} \OtherTok{FALSE}\NormalTok{) }\OperatorTok{*}\StringTok{ }\DecValTok{2}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.1169457
+\end{verbatim}
+
+\includegraphics{Lecture22_files/figure-latex/unnamed-chunk-3-1.pdf}
+
+\hypertarget{conclusion}{%
+\subsection{Conclusion}\label{conclusion}}
+
+Thus, since \(p > \alpha\), we do not have evidence at the 95\% level to
+conclude that the population proportion of computers having antivirus
+software is not 93\%. In other words, there is not sufficient evidence
+to warrant rejection of this claim.
+
+\hypertarget{solving-problems}{%
+\section{Solving Problems}\label{solving-problems}}
+
+\hypertarget{three-kinds-of-problems}{%
+\subsection{Three Kinds of Problems}\label{three-kinds-of-problems}}
+
+There are three main kinds of problems we've learned about, each with
+one or two sub-types.
+
+\begin{itemize}
+\tightlist
+\item
+  Normal distribution, question about means: confidence intervals (Z)
+  and hypothesis tests (Z)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Requires \textbf{either} known sigma and normality \textbf{or}
+    normality and 30+ samples
+  \end{itemize}
+\item
+  t distribution, question about means: confidence intervals (t) and
+  hypothesis tests (t)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The rest of the cases: less than 30 samples \textbf{and} sigma not
+    known
+  \item
+    Technically not all the cases: you'll discuss this more if you take
+    1052H
+  \end{itemize}
+\item
+  Normal distribution, question about proportions: confidence intervals
+  (Z) and hypothesis tests (Z)
+\end{itemize}
+
+\hypertarget{flow-chart}{%
+\subsection{Flow Chart}\label{flow-chart}}
+
+\hypertarget{examples}{%
+\section{Examples}\label{examples}}
+
+\hypertarget{problem-1-discarded-plastics}{%
+\subsection{Problem 1: Discarded
+Plastics}\label{problem-1-discarded-plastics}}
+
+A sample of 62 households had their recycling audited. The weights of
+their weekly recycled plastic had sample mean 1.911 pounds, with sample
+standard deviation 1.065 pounds. At the 95\% level, test the claim that
+the mean weight of recycled plastic from the population of households is
+greater than 1.80 pounds.
+
+Also find a 95\% confidence interval for the mean weight of recycled
+plastic per week.
+
+\hypertarget{section}{%
+\subsection{\texorpdfstring{\(\;\)}{\textbackslash{};}}\label{section}}
+
+\hypertarget{section-1}{%
+\subsection{\texorpdfstring{\(\;\)}{\textbackslash{};}}\label{section-1}}
+
+\hypertarget{problem-2-the-ysort-trial}{%
+\subsection{Problem 2: The YSORT
+Trial}\label{problem-2-the-ysort-trial}}
+
+The Genetics and IVF Institute conducted a clinical trial of the YSORT
+method designed to increase the probability of conceiving a boy. In this
+trial, 291 babies were born to parents using the YSORT method, and 239
+of them were boys. Use a 99\% significance level to test the claim that
+the YSORT method is effective at increasing the likelihood that a baby
+will be a boy.
+
+Also find a 95\% confidence interval for the true underlying proportion
+of babies born using the YSORT method who will be boys.
+
+\hypertarget{section-2}{%
+\subsection{\texorpdfstring{\(\;\)}{\textbackslash{};}}\label{section-2}}
+
+\hypertarget{section-3}{%
+\subsection{\texorpdfstring{\(\;\)}{\textbackslash{};}}\label{section-3}}
+
+\hypertarget{problem-3-highway-speeds}{%
+\subsection{Problem 3: Highway Speeds}\label{problem-3-highway-speeds}}
+
+Southbound traffic on the I-280 highway near Cupertino, California had
+its speed monitored at 3:30pm on a Wednesday. The sample of 12 cars had
+mean 97.6 km/hr with standard deviation 6.56 km/hr. Test the highway
+patrol's claim that the average speed on this highway at this time of
+day is lower than the speed limit of 105 km/hr.
+
+Also compute a 99\% confidence interval for the mean speed.
+
+\hypertarget{section-4}{%
+\subsection{\texorpdfstring{\(\;\)}{\textbackslash{};}}\label{section-4}}
+
+\hypertarget{section-5}{%
+\subsection{\texorpdfstring{\(\;\)}{\textbackslash{};}}\label{section-5}}
+
+\hypertarget{problem-4-weights-of-pennies}{%
+\subsection{Problem 4: Weights of
+Pennies}\label{problem-4-weights-of-pennies}}
+
+Before 1983, US pennies were made with 97\% copper and 3\% zinc. After
+1983, they were converted to 3\% copper and 97\% zinc to make them
+cheaper to manufacture. A simple random sample of 35 post-1983 pennies
+had an average weight of 2.49910g, with standard deviation 0.01648g. The
+US Mint specifies that post-1983 pennies should be manufactured with
+mean weight 2.500g. At a 95\% level, do you believe that pennies are
+actually being manufactured with mean weight of 2.500g?
+
+Compute a 99\% confidence interval for the mean weight of post-1983
+pennies.
+
+\hypertarget{section-6}{%
+\subsection{\texorpdfstring{\(\;\)}{\textbackslash{};}}\label{section-6}}
+
+\hypertarget{section-7}{%
+\subsection{\texorpdfstring{\(\;\)}{\textbackslash{};}}\label{section-7}}
+
+\hypertarget{problem-5-cell-phones-and-cancer}{%
+\subsection{Problem 5: Cell Phones and
+Cancer}\label{problem-5-cell-phones-and-cancer}}
+
+In a study of 420,095 Danish cell phone users, 125 subjects developed
+cancer of the brain or nervous system (Journal of the National Cancer
+Institute). Test the claim of the belief that such cancers are affected
+by cell phone use. That is, test the claim that cell phone users develop
+cancer of the brain or nervous system at a rate that is different from
+the rate of 0.0340\% for people who do not use cell phones. Use a 99.5\%
+significance level.
+
+\hypertarget{section-8}{%
+\subsection{\texorpdfstring{\(\;\)}{\textbackslash{};}}\label{section-8}}
+
+\hypertarget{section-9}{%
+\subsection{\texorpdfstring{\(\;\)}{\textbackslash{};}}\label{section-9}}
+
+\hypertarget{problem-6-insomnia-and-zopiclone}{%
+\subsection{Problem 6: Insomnia and
+Zopiclone}\label{problem-6-insomnia-and-zopiclone}}
+
+A clinical trial was conducted to test the effectiveness of the drug
+Zopiclone for treating insomnia in older subjects. Before treatment with
+Zopiclone, 16 subjects had a mean wake time of 102.8 minutes. After
+treatment with Zopiclone, the 16 subjects had a mean wake time of 98.9
+minutes, and a standard deviation of 42.3 minutes (JAMA). Assume that
+the 16 sample values appear to be from a normally distributed
+population, and test the claim that after treatment with Zopiclone,
+subjects have a reduced mean wake time.
+
+Also find a 95\% confidence interval for the mean wake time.
+
+\hypertarget{section-10}{%
+\subsection{\texorpdfstring{\(\;\)}{\textbackslash{};}}\label{section-10}}
+
+\hypertarget{section-11}{%
+\subsection{\texorpdfstring{\(\;\)}{\textbackslash{};}}\label{section-11}}
+
+
+\end{document}

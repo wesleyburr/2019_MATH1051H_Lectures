@@ -1,0 +1,188 @@
+---
+title: 'Lecture 22'
+output:
+   ioslides_presentation:
+     font-family: Lato Semibold
+     font-import: http://fonts.googleapis.com/css?family=Lato
+     widescreen: yes
+     css: ../style.css
+     fig_caption: yes
+---
+<style>
+citation {
+  font-size: 4px;
+}
+</style>
+
+## Warmup Example: Cyber Security
+
+Based on information from the National Cyber Security Alliance, 93% of computer owners believe they have antivirus programs installed on their computers.
+
+In a random sample of 400 scanned computers, it is found that 380 of them (or 95%) actually have antivirus software
+programs.
+
+Use the sample data from the scanned computers to test the claim that 93% of computers have antivirus software.
+
+## Requirements
+
+1. The 400 computers were randomly selected (check!)
+2. There is a fixed number of independent trials, two possible outcomes (check!)
+3. Is $np_0 \geq 10$? Is $n(1-p_0) \geq 10$?
+$$
+\begin{align*}
+    np_0 &= (400)(0.93) = 372 \\
+n(1-p_0) &= (400)(1-0.93) = 28
+\end{align*}
+$$
+Check!
+
+## Hypotheses
+
+Write the hypotheses:
+
+$$
+\mathbf{H_0}: p = 0.93 \qquad \text{versus} \qquad \mathbf{H_A}: p \neq 0.93
+$$
+
+## Significance Level, Test Statistic
+
+Since we didn't have a specified level, choose $\alpha = 0.05$. We are testing a claim about a **population proportion**, so we will use a normal approximation:
+
+$$
+z_\text{test} = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} = \frac{ \frac{380}{400} - 0.93}{\sqrt{\frac{0.93(0.07)}{400}}}
+$$
+
+```{r}
+z_test <- ( 380/400 - 0.93 ) / sqrt( 0.93 * 0.07 / 400 )
+z_test
+```
+
+## The p-value
+
+```{r}
+pnorm(z_test, lower.tail = FALSE) * 2
+```
+
+<div style="margin-top: -50px;">
+<center>
+```{r, echo = FALSE}
+z_axis <- seq(-3.5, 3.5, 0.01)
+plot(z_axis, dnorm(z_axis), type = "l", xlab = "Z", ylab = "Density")
+abline(h = 0)
+abline(v = z_test, col = "red")
+text(x = 2.3, y = 0.12, label = "0.0582", col = "red")
+```
+</center>
+</div>
+
+## Conclusion
+
+Thus, since $p > \alpha$, we do not have evidence at the 95% level to conclude that the population proportion of computers having antivirus software is not 93%. In other words, there is not sufficient evidence to warrant rejection of this claim.
+
+# Solving Problems
+
+## Three Kinds of Problems
+
+There are three main kinds of problems we've learned about, each with one or two sub-types. 
+
+* Normal distribution, question about means: confidence intervals (Z) and hypothesis tests (Z)
+  * Requires **either** known sigma and normality **or** normality and 30+ samples
+* t distribution, question about means: confidence intervals (t) and hypothesis tests (t)
+  * The rest of the cases: less than 30 samples **and** sigma not known
+  * Technically not all the cases: you'll discuss this more if you take 1052H
+* Normal distribution, question about proportions: confidence intervals (Z) and hypothesis tests (Z)
+
+## Flow Chart
+
+# Examples
+
+## Problem 1: Discarded Plastics
+
+A sample of 62 households had their recycling audited. The weights of their
+weekly recycled plastic had sample mean 1.911 pounds, with sample standard
+deviation 1.065 pounds. At the 95\% level, test the claim that the mean 
+weight of recycled plastic from the population of households is greater than
+1.80 pounds.
+
+Also find a 95\% confidence interval for the mean weight of recycled plastic
+per week.
+
+## $\;$
+
+## $\;$
+
+## Problem 2: The YSORT Trial
+
+The Genetics and IVF Institute conducted a clinical trial of the YSORT method
+designed to increase the probability of conceiving a boy. In this trial,
+291 babies were born to parents using the YSORT method, and 239 of them were
+boys. Use a 99\% significance level to test the claim that the YSORT method
+is effective at increasing the likelihood that a baby will be a boy.
+
+Also find a 95\% confidence interval for the true underlying proportion of
+babies born using the YSORT method who will be boys.
+
+## $\;$
+
+## $\;$
+
+## Problem 3: Highway Speeds
+
+Southbound traffic on the I-280 highway near Cupertino, California
+had its speed monitored at 3:30pm on a Wednesday. The sample of 12
+cars had mean 97.6 km/hr with standard deviation 6.56 km/hr. Test
+the highway patrol's claim that the average speed on this highway
+at this time of day is lower than the speed limit of 105 km/hr.
+
+Also compute a 99\% confidence interval for the mean speed.
+
+## $\;$
+
+## $\;$
+
+## Problem 4: Weights of Pennies
+
+Before 1983, US pennies were made with 97\% copper and 3\% zinc.
+After 1983, they were converted to 3\% copper and 97\% zinc to make
+them cheaper to manufacture. A simple random sample of 35
+post-1983 pennies had an average weight of 2.49910g, with standard
+deviation 0.01648g. The US Mint specifies that post-1983 pennies should be manufactured
+with mean weight 2.500g. At a 95\% level, do you believe that pennies
+are actually being manufactured with mean weight of 2.500g?
+
+Compute a 99\% confidence interval for the mean weight of post-1983 pennies.
+
+## $\;$
+
+## $\;$
+
+## Problem 5: Cell Phones and Cancer
+
+In a study of 420,095 Danish cell phone users, 125 subjects developed
+cancer of the brain or nervous system (Journal of the National Cancer
+Institute). Test the claim of the belief that such cancers are affected
+by cell phone use. That is, test the claim that cell phone users develop 
+cancer of the brain or nervous system at a rate that is different from the
+rate of 0.0340\% for people who do not use cell phones. Use a 
+99.5\% significance level.
+
+## $\;$
+
+## $\;$
+
+## Problem 6: Insomnia and Zopiclone
+
+A clinical trial was conducted to test the effectiveness of the drug
+Zopiclone for treating insomnia in older subjects. Before treatment with
+Zopiclone, 16 subjects had a mean wake time of 102.8 minutes. After treatment
+with Zopiclone, the 16 subjects had a mean wake time of 98.9 minutes, and a 
+standard deviation of 42.3 minutes (JAMA). Assume that the 16 sample
+values appear to be from a normally distributed population, and test the claim
+that after treatment with Zopiclone, subjects have a reduced mean wake time.
+
+Also find a 95\% confidence interval for the mean wake time.
+
+
+## $\;$
+
+## $\;$
