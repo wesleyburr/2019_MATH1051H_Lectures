@@ -278,6 +278,36 @@ class: inverse
 <a href="./Lecture21/Lecture21.pdf">PDF</a>;
 <a href="./Lecture21/Lecture21.pptx">PPTX</a>;
 
+<br />
+
+**Lecture 22 - November 27**
+
+<a href="./Lecture22/Lecture22.html">HTML</a>; 
+<a href="./Lecture22/Lecture22.pdf">PDF</a>;
+(<a href="./Lecture22/Lecture22-annotated.pdf">annotated</a>);
+<a href="./Lecture22/Lecture22.pptx">PPTX</a>;
+(<a href="./Lecture22/Lecture22-R-Code.pdf">R Code</a>)
+
+---
+
+class: inverse
+
+## Week 12
+
+**Workshop 12**
+
+<a href="toronto_ap.csv">Toronto AP Data File</a>
+
+<br />
+
+**Lecture 21 - November 22**
+
+<a href="./Lecture21/Lecture21.html">HTML</a>; 
+<a href="./Lecture21/Lecture21.pdf">PDF</a>;
+<a href="./Lecture21/Lecture21.pptx">PPTX</a>;
+
+<br />
+
 **Lecture 22 - November 27**
 
 <a href="./Lecture22/Lecture22.html">HTML</a>; 
