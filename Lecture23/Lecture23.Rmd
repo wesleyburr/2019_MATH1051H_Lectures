@@ -1,0 +1,28 @@
+---
+title: 'Lecture 23'
+output:
+   ioslides_presentation:
+     font-family: Lato Semibold
+     font-import: http://fonts.googleapis.com/css?family=Lato
+     widescreen: yes
+     css: ../style.css
+     fig_caption: yes
+---
+<style>
+citation {
+  font-size: 4px;
+}
+</style>
+
+## Reading Some Papers
+
+Today we're going to briefly explore the way that statistics are presented in real scientific papers.
+We will do so using two of the three papers that were the inspiration for your third R assignment!
+
+## Childhood Obesity
+
+Click the link for the [first paper](Infant_Antibiotic_Exposure.pdf).
+
+## Metal Levels in Tuna
+
+Click the link for the [second paper](Mercury_and_Cadmium_in_Tuna.pdf)
